@@ -60,13 +60,13 @@ function App() {
 
       </div>
       <div className="card">
-        <ThreeDotsLoader />
+  <ThreeDotsLoader />
+  
+  <a href="mailto:admin@bluecloudai.com">
+    <button>Get in touch</button>
+  </a>
+</div>
 
-        <button>
-          <a href="mailto:admin@bluecloudai.com"></a>
-          get in touch
-        </button>
-      </div>
       <div className="exciting">
         <motion.div
           style={{
@@ -76,7 +76,7 @@ function App() {
             justifyContent: "center",
           }}
           animate={{ rotateZ: [0, 30, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          transition={{ delay: 1,repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="flex"
         >
           {"exciting".split("").map((char, index) => (

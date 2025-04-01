@@ -5,9 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url(./assets/BACKGROUND.png);
   background-color: #242424;
-  height: 100vh;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +27,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* background-image: url(./assets/BACKGROUND.png); */
+  background-color: #150450;
+
   overflow-x: hidden; 
 
 }
@@ -76,9 +77,8 @@ button:focus-visible {
   }
 }
 .animate {
-  height: 60%;
   width: 60%;
-  /* background-color:aqua; */
+  background-color:inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,14 +144,55 @@ p {
     transform: rotateZ(30deg);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   body {
       overflow-x: hidden;  /* Prevents horizontal scrolling */
+      display: flex;
+      place-items: center;
+      margin: auto;
+      height: 100vh;
+      overflow: hidden;
   }
 
   .container {
-      height: 100vh; /* Ensures each section takes full screen height */
-      overflow: hidden; /* Prevents overflow issues */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+      height: 100vh; /*  each section takes full screen height */
+      overflow-x: hidden;
+      
+  }
+  @keyframes new-look {
+    from {
+      translate: 15px;
+      scale: 100% 1;
+    }
+    to {
+      translate: 0 0;
+      scale: 50% 1;
+    }
+  }
+
+  .animated-element {
+    animation: new-look 0.5s ease-in-out forwards;
+  }
+  .fresh {
+    top: 60px;
+    right: 60px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .exciting {
+    top: 180px;
+    left: 25px;
+    position: absolute;
+    /* width: 100px; */
+    font-size: 20px;
+    font-weight: bolder;
+  
   }
 
 
