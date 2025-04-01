@@ -4,7 +4,8 @@ import "./App.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import ThreeDotsLoader from "./ThreeDotsLoader";
 import { motion } from "framer-motion";
-
+import SOON from "./assets/SOON.png"
+import COMING from "./assets/COMING.png"
 function App() {
   // const [count, setCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +16,7 @@ function App() {
   
       <motion.div className="animate" initial="hidden" animate="visible" variants={containerVariants}>
       <motion.img 
-        src="COMING.png" 
+        src={COMING}
         alt="coming" 
         variants={itemVariants} 
         custom={0} // No delay for first element
@@ -26,7 +27,7 @@ function App() {
       </motion.div>
 
       <motion.img 
-        src="SOON.png" 
+        src={SOON}
         alt="soon" 
         variants={itemVariants} 
         custom={2} // 2-second delay
