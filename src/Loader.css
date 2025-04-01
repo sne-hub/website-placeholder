@@ -1,0 +1,42 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* width: 100px; */
+    height: 30px;
+    justify-self: center;
+    margin-bottom: 20px; 
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin: 0 5px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.dot1 {
+    animation-delay: 0s;
+}
+
+.dot2 {
+    animation-delay: 0.3s;
+}
+
+.dot3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        /* transform: translateY(-10px); */
+        opacity: 0.5;
+    }
+}
