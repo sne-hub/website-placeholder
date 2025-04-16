@@ -27,15 +27,18 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background-image: url(./assets/BACKGROUND.png); */
-  background-color: #150450;
+  background-image: url(./assets/BC.png);
 
   overflow-x: hidden; 
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .container {
   width: 900px;
   position: relative;
+  place-items: center;
+
 }
 h1 {
   font-size: 3.2em;
@@ -144,25 +147,33 @@ p {
     transform: rotateZ(30deg);
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    background-image: url('./assets/BC.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   body {
-      overflow-x: hidden;  /* Prevents horizontal scrolling */
-      display: flex;
-      place-items: center;
-      margin: auto;
-      height: 100vh;
-      overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-      height: 100vh; /*  each section takes full screen height */
-      overflow-x: hidden;
-      
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1;
   }
   @keyframes new-look {
     from {
@@ -179,21 +190,81 @@ p {
     animation: new-look 0.5s ease-in-out forwards;
   }
   .fresh {
-    top: 60px;
-    right: 60px;
+    top: 10%;
+    right: 16%;
     position: absolute;
     font-size: 20px;
     font-weight: bolder;
   }
   .exciting {
-    top: 180px;
-    left: 25px;
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+  
+  }
+
+
+}
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    background-image: url('./assets/BC.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  @keyframes new-look {
+    from {
+      translate: 15px;
+      scale: 100% 1;
+    }
+    to {
+      translate: 0 0;
+      scale: 50% 1;
+    }
+  }
+
+  .animated-element {
+    animation: new-look 0.5s ease-in-out forwards;
+  }
+  .fresh {
+    top: 11%;
+    right: 17%;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .exciting {
+    top: 36%;
+    left: 18%;
     position: absolute;
     /* width: 100px; */
     font-size: 20px;
     font-weight: bolder;
   
   }
-
 
 }

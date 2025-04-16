@@ -6,6 +6,10 @@ import ThreeDotsLoader from "./ThreeDotsLoader";
 import { motion } from "framer-motion";
 import SOON from "./assets/SOON.png"
 import COMING from "./assets/COMING.png"
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 function App() {
   // const [count, setCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -65,6 +69,41 @@ function App() {
   <a href="mailto:admin@bluecloudai.com">
     <button>Get in touch</button>
   </a>
+  <div className="address" style={{ textSize: "small" , fontSize:"small", margin: "20px"}}>
+          <h3>+27 11 123 123</h3>
+          <h3>48 Tesla Crescent Sunninghill Johannesburg 2162</h3>
+          <h3>Bluecloudai.com</h3>
+        </div>
+        <div
+  className="socials"
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    padding: "2px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    cursor: "pointer",
+  }}
+>
+  <FacebookIcon
+    sx={{ color: "#1877F2" }}
+    onClick={() => window.open("https://www.facebook.com/BluecloudAI1/", "_blank")}
+  />
+  <XIcon
+    sx={{ color: "black" }}
+    onClick={() => window.open("https://twitter.com/BlueCloudAI_", "_blank")}
+  />
+  <LinkedInIcon
+    sx={{ color: "#0077B5" }}
+    onClick={() => window.open("https://www.linkedin.com/in/bluecloud-ai/", "_blank")}
+  />
+  <InstagramIcon
+    sx={{ color: "#962fbf" }}
+    onClick={() => window.open("https://www.instagram.com/bluecloud_ai/", "_blank")}
+  />
+</div>
+
 </div>
 
       <div className="exciting">
