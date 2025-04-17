@@ -229,6 +229,10 @@ p {
     border: 2px dashed red;
 
   }
+  .container > *:not(.fresh):not(.exciting) {
+    min-width: 100%;
+  }
+  
   /* .container > * {
     min-width: 100%;
   } */
