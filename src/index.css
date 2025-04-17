@@ -220,6 +220,7 @@ p {
     max-width: 400px;
     width: 90vw;
     text-align: center;
+    position: relative;
     margin: 0 auto;
     flex-shrink: 0;
     -webkit-flex-shrink: 0;
@@ -228,9 +229,9 @@ p {
     border: 2px dashed red;
 
   }
-  .container > * {
+  /* .container > * {
     min-width: 100%;
-  }
+  } */
   .animate {
     width: 80%;
     display: flex;
@@ -256,21 +257,21 @@ p {
     animation: new-look 0.5s ease-in-out forwards;
   }
   .fresh {
+    position: absolute;
     top: 10%;
     right: 2%;
-    position: absolute;
     font-size: 22px;
     font-weight: bolder;
-    justify-content: space-around;
   }
+  
   .exciting {
+    position: absolute;
     top: 42%;
     left: 2%;
-    position: absolute;
     font-size: 22px;
     font-weight: bolder;
-  
   }
+
 
 
 }@media screen and (min-width: 600px) and (max-width: 1024px) {
