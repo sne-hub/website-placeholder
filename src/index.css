@@ -218,7 +218,7 @@ p {
 
   .container {
     max-width: 400px;
-    width: 90vw;
+    width: 95vw;
     text-align: center;
     position: relative;
     margin: 0 auto;
@@ -226,11 +226,10 @@ p {
     -webkit-flex-shrink: 0;
     min-width: 320px;
     display: block;
-    border: 2px dashed red;
 
   }
   .container > *:not(.fresh):not(.exciting) {
-    min-width: 100%;
+    min-width: 85%;
   }
   
   /* .container > * {
@@ -262,17 +261,17 @@ p {
   }
   .fresh {
     position: absolute;
-    top: 10%;
-    right: 2%;
-    font-size: 22px;
+    top: 11%;
+    right: 0%;
+    font-size: 21px;
     font-weight: bolder;
   }
   
   .exciting {
     position: absolute;
-    top: 42%;
-    left: 2%;
-    font-size: 22px;
+    top: 47%;
+    left: 0%;
+    font-size: 21px;
     font-weight: bolder;
   }
 
@@ -340,7 +339,7 @@ p {
     font-weight: bolder;
   }
   .exciting {
-    top: 50%;
+    top: 53%;
     left: 2%;
     position: absolute;
     /* width: 100px; */
