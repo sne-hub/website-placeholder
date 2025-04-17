@@ -52,6 +52,7 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
+  color: white;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -195,6 +196,8 @@ p {
     width: 90%;
 
     padding: 12px 0; /* Add vertical padding */
+    flex-shrink: 0; /* Prevent shrinking */
+    -webkit-flex-shrink: 0; /* Safari prefix */
   }
 
   .container {
@@ -203,7 +206,8 @@ p {
     text-align: center;
     position: relative;
     margin: 0 auto;
-
+    flex-shrink: 0; /* Prevent shrinking */
+    -webkit-flex-shrink: 0; /* Safari prefix */
   }
 
   @keyframes new-look {
@@ -224,6 +228,8 @@ p {
     justify-content: center;
     margin-left: auto;
     margin-right: auto; /* or shorthand: margin: 0 auto; */
+    flex-shrink: 0; /* Prevent shrinking */
+    -webkit-flex-shrink: 0; /* Safari prefix */
   }
   .animated-element {
     animation: new-look 0.5s ease-in-out forwards;
@@ -264,7 +270,7 @@ p {
   }
 
   .container {
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
     width:90%;
