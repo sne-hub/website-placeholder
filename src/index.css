@@ -40,6 +40,7 @@ body {
   width: 900px;
   position: relative;
 
+
 }
 h1 {
   font-size: 3.2em;
@@ -56,6 +57,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-bottom:30px;
 }
 button:hover {
   border-color: #646cff;
@@ -65,7 +67,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -79,7 +81,7 @@ button:focus-visible {
   .animate {
     background-color: #ffffff;
   }
-}
+} */
 .animate {
   width: 60%;
   background-color: inherit;
@@ -89,6 +91,7 @@ button:focus-visible {
   margin-left: auto;
   margin-right: auto; /* or shorthand: margin: 0 auto; */
 }
+
 .new-look {
   color: yellow;
   background-color: #69359c;
@@ -102,6 +105,14 @@ button:focus-visible {
   font-weight: bold;
   justify-self: center;
   filter: drop-shadow(1em 0 3em #646cffaa);
+  font-size: clamp(16px, 3vw, 24px);
+  -webkit-text-size-adjust: 100%;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  
+  /* Filter fixes */
+  -webkit-filter: drop-shadow(1em 0 3em #646cffaa);
+  filter: drop-shadow(1em 0 3em #646cffaa);
 }
 
 p {
@@ -113,7 +124,7 @@ p {
 @keyframes new-look {
   from {
     translate: 30px;
-    scale: 200% 1;
+    scale: 00% 1;
   }
   to {
     translate: 0 0;
@@ -128,6 +139,8 @@ p {
   font-size: 40px;
   font-weight: bolder;
   animation: bounce 5s linear 2s infinite alternate;
+  -webkit-animation: bounce 5s linear 2s infinite alternate;
+
 }
 .exciting {
   top: 350px;
@@ -136,10 +149,19 @@ p {
   /* width: 100px; */
   font-size: 40px;
   font-weight: bolder;
+  -webkit-animation: bounce 5s linear infinite alternate;
+  animation: bounce 5s linear infinite alternate;
 
   animation-name: bounce;
 }
-
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+  }
+}
 @keyframes bounce {
   0% {
     transform: rotateZ(0deg);
@@ -148,7 +170,11 @@ p {
     transform: rotateZ(30deg);
   }
 }
-@media screen and (max-width: 768px) {
+.fresh, .exciting {
+  -webkit-transform: translateZ(0); /* Forces GPU acceleration */
+  transform: translateZ(0);
+}
+@media screen and (max-width: 600px) {
   html, body {
     margin: 0;
     padding: 0;
@@ -156,7 +182,7 @@ p {
     width: 100vw;
     overflow: hidden;
 
-    background-image: url('./assets/BC.png');
+    background-image: url('./assets/VERTICALBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
@@ -164,49 +190,63 @@ p {
     align-items: center;
     background-position: center;
   }
+  .new-look {
+    height:1rem;
+    width: 90%;
 
+    padding: 12px 0; /* Add vertical padding */
+  }
 
   .container {
-    width: 80%;
     max-width: 400px;
+    width:90%;
     text-align: center;
     position: relative;
     margin: 0 auto;
 
   }
+
   @keyframes new-look {
     from {
       translate: 15px;
-      scale: 100% 1;
+      scale: 00% 1;
     }
     to {
       translate: 0 0;
-      scale: 50% 1;
+      scale: 100% 1;
     }
   }
-
+  .animate {
+    width: 80%;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; /* or shorthand: margin: 0 auto; */
+  }
   .animated-element {
     animation: new-look 0.5s ease-in-out forwards;
   }
   .fresh {
-    top: 5%;
-    right: 10%;
+    top: 10%;
+    right: 2%;
     position: absolute;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bolder;
+    justify-content: space-around;
   }
   .exciting {
-    top: 28%;
-    left: 5%;
+    top: 42%;
+    left: 2%;
     position: absolute;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bolder;
   
   }
 
 
-}
-@media screen and (min-width: 820px) and (max-width: 1024px) {
+}@media screen and (min-width: 600px) and (max-width: 1024px) {
   html, body {
     margin: 0;
     padding: 0;
@@ -214,7 +254,7 @@ p {
     width: 100vw;
     overflow: hidden;
 
-    background-image: url('./assets/BC.png');
+    background-image: url('./assets/VERTICALBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
@@ -224,43 +264,55 @@ p {
   }
 
   .container {
-    width: 80%;
     max-width: 600px;
-    padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    z-index: 1;
     margin: 0 auto;
+    width:90%;
+
 
   }
   
   @keyframes new-look {
     from {
       translate: 15px;
-      scale: 100% 1;
+      scale: 00% 1;
     }
     to {
       translate: 0 0;
-      scale: 50% 1;
+      scale: 100% 1;
     }
   }
+  .animate {
+    width: 80%;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; /* or shorthand: margin: 0 auto; */
+  }
+  .new-look {
+    height:1.5rem;
+    width: 80%;
 
+    padding: 12px 0; /* Add vertical padding */
+  }
   .animated-element {
     animation: new-look 0.5s ease-in-out forwards;
   }
   .fresh {
-    top: 11%;
-    right: 17%;
+    top: 14%;
+    right: 2%;
     position: absolute;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder;
   }
   .exciting {
-    top: 36%;
-    left: 18%;
+    top: 50%;
+    left: 2%;
     position: absolute;
     /* width: 100px; */
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder;
   
   }
